@@ -66,6 +66,15 @@ RecNote is a beautiful, modern, AI-assisted transcription and summarization appl
 
 ---
 
+## 🔄 Automated CI/CD & Cloud Deployment
+
+To demonstrate production-ready operations and modern DevOps practices, the RecNote backend utilizes a fully automated **Continuous Integration and Continuous Deployment (CI/CD)** pipeline:
+
+* **Cloud Hosting:** The Node.js production server is hosted live on **Render**.
+* **Automated Webhook Deployments:** The Render web service is directly linked to the project's GitHub repository. 
+* **Git-Driven Workflow:** Every time a new change or bug fix is pushed or merged into the primary branch (`git push origin main`), Render automatically detects the commit, pulls the latest codebase, builds the environment, and triggers a zero-downtime redeployment.
+* **Health Monitoring:** The backend exposes a `/health` verification endpoint (`app.get('/health')`), which allows the cloud orchestrator to monitor uptime and ensure server stability automatically.
+
 ## 📦 Setup & Deployment
 
 ### 1. Project Prerequisites
